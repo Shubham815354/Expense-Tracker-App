@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/homeh"
+        android:title="Home" />
+    <item
+        android:id="@+id/nav_report"
+        android:icon="@drawable/reportr"
+        android:title="Report" />
+    <item
+        android:id="@+id/nav_category"
+        android:icon="@drawable/categoryc"
+        android:title="Category" />
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/profilep"
+        android:title="Profile" />
+
+</menu>

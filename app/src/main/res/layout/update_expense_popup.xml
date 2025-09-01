@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_marginTop="42dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textColor="#333333"
+            android:fontFamily="@font/roboto_condensed_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update Expense"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="60dp">
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="239dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_data_text"
+            android:padding="8dp"
+            android:spinnerMode="dropdown"
+            android:gravity="center_vertical"
+            android:popupBackground="@android:color/white"
+            android:drawableEnd="@drawable/down_arrow"
+            android:drawablePadding="8dp"/>
+        <EditText
+            android:layout_marginTop="20dp"
+            android:layout_width="239dp"
+            android:background="@drawable/edit_data_text"
+            android:id="@+id/amount"
+            android:inputType="number"
+            android:layout_height="wrap_content"
+            android:hint="Amount"/>
+        <EditText
+            android:layout_marginTop="20dp"
+            android:layout_width="239dp"
+            android:background="@drawable/edit_data_text"
+            android:id="@+id/_name"
+            android:layout_height="wrap_content"
+            android:hint="Name"/>
+        <EditText
+            android:id="@+id/date_input"
+            android:layout_width="239dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edit_data_text"
+            android:hint="Select Date"
+            android:focusable="false"
+            android:inputType="none"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cancell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cancel_button"
+                    android:drawablePadding="8dp"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp"
+                    android:text="Delete"
+                    android:textColor="#3B3939"
+                    android:textSize="16sp"
+                    app:backgroundTint="@null" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/savee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_this_month_button"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp"
+                    android:text="Update"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:drawablePadding="8dp"
+                    app:backgroundTint="@null" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

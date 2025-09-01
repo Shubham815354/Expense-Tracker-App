@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_margin="10dp"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/icon_image_home"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/spinner_text_home"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Food and Drinks"
+        android:textSize="16dp"
+        android:fontFamily="@font/roboto_condensed_bold"
+        android:textColor="@android:color/black"
+        android:background="@android:color/transparent"
+        android:padding="0dp" />
+
+    <TextView
+        android:id="@+id/arrow_down_home"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:textSize="16dp"
+        android:text="245"
+        android:fontFamily="@font/roboto_condensed_bold"
+        android:textColor="#CF3F3F"
+        android:contentDescription="Dropdown" />
+
+</LinearLayout>

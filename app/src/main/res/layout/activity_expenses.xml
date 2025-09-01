@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Expenses">
+
+    <!-- Only one ScrollView -->
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_marginBottom="56dp">
+
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="96dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Report"
+                android:textSize="22sp"
+                android:textColor="#3B3939"
+                android:fontFamily="@font/roboto_condensed_bold"
+                android:layout_marginLeft="45dp"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Button Group -->
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggleGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@android:color/transparent"
+                app:singleSelection="true"
+                app:selectionRequired="true"
+                app:checkedButton="@id/btnExpense">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnExpense"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:text="Expense"
+                    android:fontFamily="@font/roboto_condensed_bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    style="@style/RoundedLeftButton"
+                    app:backgroundTint="#0074C7"
+                    app:strokeWidth="0dp"
+                    app:iconGravity="textStart"
+                    app:rippleColor="@android:color/transparent"
+                    android:elevation="0dp"
+                    app:iconTint="@android:color/white" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnBudget"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:text="Budget"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_condensed_bold"
+                    style="@style/RoundedRightButton"
+                    app:backgroundTint="#F2E6E6"
+                    app:strokeWidth="0dp"
+                    android:elevation="0dp"
+                    app:rippleColor="@android:color/transparent" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+
+            <!-- Image Button -->
+            <com.google.android.material.button.MaterialButton
+                android:background="@drawable/bg_this_month_button"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:text="This Month"
+                android:id="@+id/btn_select_month"
+                android:layout_marginTop="32dp"
+                android:textColor="#FFFFFF"
+                app:backgroundTint="@null"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:drawableRight="@drawable/down_arrow"
+                android:drawablePadding="8dp" />
+
+            <!-- Chart and Labels -->
+            <FrameLayout
+                android:id="@+id/chart_container"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="24dp"
+                android:layout_gravity="center">
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pieChart"
+                    android:layout_width="290dp"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvCenterTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Expense"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvCenterValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2000"
+                        android:textSize="20sp"
+                        android:textColor="#4CAF50"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </FrameLayout>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recent Expenses"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="18dp"
+                android:textColor="#2587CD"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                android:layout_marginBottom="72dp"
+                android:background="@android:color/transparent"
+                app:cardBackgroundColor="#E7ECEF">
+
+                <!-- Content goes here -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <!-- RecyclerView -->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:id="@+id/recyclerViewExpenses"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="32dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/Add_Expense"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_details"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp"
+                    android:text="Add Expense"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:drawablePadding="8dp"
+                    app:backgroundTint="@null" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navExp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemTextColor="@color/nav_item_color"
+        app:itemIconTint="@color/nav_item_color"
+        android:background="#F9F6FE"
+        app:labelVisibilityMode="labeled" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

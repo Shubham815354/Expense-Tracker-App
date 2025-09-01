@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="0dp">
+
+    <!-- Expense Name and Amount Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/tvExpenseName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Groceries"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/tvExpenseAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="end"
+            android:text="$100"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <!-- Progress bar + Percentage Text -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="4dp">
+
+        <!-- Container for the dynamic color bar -->
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="8dp"
+            android:background="#D3D3D3">
+
+            <!-- Colored bar (will be set dynamically) -->
+            <View
+                android:id="@+id/colorBar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:background="#007BFF" />
+        </FrameLayout>
+
+        <!-- Percentage text -->
+        <TextView
+            android:id="@+id/percentageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="2%"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppins_regular" />
+    </LinearLayout>
+
+</LinearLayout>

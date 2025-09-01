@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/bottom_sheet_addbudget_bg"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD Budget"
+            android:fontFamily="@font/roboto_condensed_bold"
+            android:textColor="#3D3D3D"
+            android:textSize="21sp"/>
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginTop="30dp">
+    <Spinner
+        android:id="@+id/category_spinner_"
+        android:layout_width="239dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:descendantFocusability="afterDescendants"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:padding="16dp"
+        android:background="@drawable/edit_data_text"/>
+    <EditText
+        android:layout_marginTop="10dp"
+        android:layout_width="239dp"
+        android:id="@+id/amountEditText"
+        android:background="@drawable/edit_data_text"
+        android:inputType="number"
+        android:layout_height="wrap_content"
+        android:hint="Amount"/>
+    <EditText
+        android:layout_marginTop="10dp"
+        android:id="@+id/budgetFrequencyEditText"
+        android:layout_width="239dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_data_text"
+        android:hint="Select Frequency"
+        android:focusable="false"
+        android:clickable="true"/>
+
+
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_this_month_button"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:text="Cancel"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:drawablePadding="8dp"
+                app:backgroundTint="@null" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/add_budget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_this_month_button"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:text="ADD"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:drawablePadding="8dp"
+                app:backgroundTint="@null" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

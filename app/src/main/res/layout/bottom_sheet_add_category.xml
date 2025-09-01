@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter your category name"
+        android:textSize="18sp"
+        android:paddingBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/edit_category_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Category name"
+        android:inputType="text"/>
+
+    <Button
+        android:id="@+id/btn_add_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:layout_gravity="end"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>

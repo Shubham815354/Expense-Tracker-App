@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_marginBottom="56dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="34dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ho_tv"
+                android:text="Transaction"
+                android:textSize="21dp"
+                android:fontFamily="@font/roboto_condensed_bold"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ho_tv"
+                android:layout_margin="15dp"
+                android:id="@+id/trans_home_linear"
+                android:orientation="horizontal"
+                android:background="@drawable/home_transaction_bg"
+                android:gravity="center_vertical">
+
+                <FrameLayout
+                    android:layout_width="60dp"
+                    android:layout_height="64dp"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/centerButton"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/outer_bell"
+                        android:src="@drawable/bell"
+                        android:contentDescription="Center Button" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/trans_tv_"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginStart="15dp"
+                        android:text="7 New Transactions"
+                        android:fontFamily="@font/roboto_condensed_bold"
+                        android:textSize="18sp"
+                        android:textColor="#F3E9E9" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textSize="13sp"
+                        android:layout_marginStart="15dp"
+                        android:textColor="#F3E9E9"
+                        android:text="Review to update your budget." />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="1dp"
+                    android:layout_margin="15dp"
+                    android:src="@drawable/right_home_trans" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/trans_home_linear"
+                android:layout_width="match_parent"
+                android:id="@+id/home_bar_linear"
+                android:layout_margin="15dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aalysis_rounded_border_background"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/calendarHeader_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:padding="8dp">
+                    <ImageButton
+                        android:id="@+id/btn_prev_month_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/chevron_left_"
+                        android:contentDescription="Previous Month" />
+                    <TextView
+                        android:id="@+id/tv_month_year_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="April 2025"
+                        android:textColor="#5C5C5C"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_marginHorizontal="16dp" />
+
+                    <ImageButton
+                        android:id="@+id/btn_next_month_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/chevron_right_"
+                        android:contentDescription="Next Month" />
+                </LinearLayout>
+                <com.example.expenso.view.SemiCircularProgressBar
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/semiProgressBar"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="15dp"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_below="@id/home_bar_linear"
+                android:layout_marginTop="18dp"
+                android:layout_width="match_parent"
+                android:id="@+id/home_recycler"
+                android:background="@drawable/new_bottom"
+                android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    </ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_Home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#F9F6FE"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemTextColor="@color/nav_item_color"
+        app:itemIconTint="@color/nav_item_color"
+        app:labelVisibilityMode="labeled"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

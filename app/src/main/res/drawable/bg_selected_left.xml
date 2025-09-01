@@ -1,0 +1,19 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Shadow Layer -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#00000040"/> <!-- 25% opacity black -->
+            <corners android:topLeftRadius="16dp" android:bottomLeftRadius="16dp"/>
+        </shape>
+    </item>
+
+    <!-- Button Layer (on top of shadow) -->
+    <item android:left="0dp" android:top="0dp" android:right="0dp" android:bottom="4dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#0164AB"/> <!-- Your blue color -->
+            <corners android:topLeftRadius="16dp" android:bottomLeftRadius="16dp"/>
+        </shape>
+    </item>
+
+</layer-list>

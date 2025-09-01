@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_marginTop="43dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:gravity="center"
+            android:textSize="16dp"
+            android:textColor="#333333"
+            android:fontFamily="@font/roboto_condensed_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delete this budget ? "/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#454545"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="14dp"
+            android:gravity="center"
+            android:text="Budget over this category will be delete for this month, are you sure ?"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/delete_budget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cancel_button"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp"
+                    android:text="Delete"
+                    android:textColor="#3B3939"
+                    android:textSize="16sp"
+                    android:drawablePadding="8dp"
+                    app:backgroundTint="@null" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/Update_budget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_this_month_button"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp"
+                    android:text="Cancel"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:drawablePadding="8dp"
+                    app:backgroundTint="@null" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

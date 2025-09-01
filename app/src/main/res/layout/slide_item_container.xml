@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="15dp"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageSlideIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="This is my App"/>
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Easy Way To Monitor Your Expense"
+        android:fontFamily="@font/roboto_condensed_bold"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#3E3E3E" />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/textDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Safe your future by managing your expense right now"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#969696" />
+</LinearLayout>

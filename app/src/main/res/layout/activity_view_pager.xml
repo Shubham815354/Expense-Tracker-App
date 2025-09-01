@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewPager">
+
+    <!-- Top design bar -->
+    <LinearLayout
+        android:id="@+id/view_pager_top_linear"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+    android:orientation="vertical"
+    android:background="@drawable/top_viewpager" />
+
+    <!-- ViewPager2 below top bar and above indicators -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/introSliderViewPager"
+        android:layout_below="@id/view_pager_top_linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="140dp" />
+    <!-- Left Arrow -->
+    <ImageView
+        android:id="@+id/arrowImage_left"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/view_pager_left"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:layout_marginStart="24dp" />
+
+    <!-- Right Arrow -->
+    <ImageView
+        android:id="@+id/arrowImage_right"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/viewpager_right"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:layout_marginEnd="24dp" />
+
+    <LinearLayout
+        android:id="@+id/indicatorContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="140dp" />
+
+
+
+</RelativeLayout>

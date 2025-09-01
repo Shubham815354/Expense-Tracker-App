@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">EXPENSO</string>
+    <string name="resend_code_underlined"><u>Resend code</u></string>
+    <string name="title_activity_category">Category</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+</resources>
